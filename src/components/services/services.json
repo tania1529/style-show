@@ -1,0 +1,131 @@
+{
+  "salon_services": [
+    {
+      "category": "Hair Services",
+      "services": [
+        {
+          "name": "Haircut",
+          "description": "Professional haircut tailored to your style.",
+          "price": "500 INR",
+          "imageId": "1.jpg"
+        },
+        {
+          "name": "Hair Coloring",
+          "description": "Full color, highlights, or lowlights using high-quality products.",
+          "price": "1500 INR",
+          "imageId": "2.jpg"
+        },
+        {
+          "name": "Hair Styling",
+          "description": "Styling for special occasions including blowouts and updos.",
+          "price": "800 INR",
+          "imageId": "3.jpg"
+        },
+        {
+          "name": "Hair Treatment",
+          "description": "Deep conditioning, keratin treatment, and scalp treatments.",
+          "price": "1200 INR",
+          "imageId": "4.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Skin Services",
+      "services": [
+        {
+          "name": "Facial",
+          "description": "Customized facials for all skin types using organic products.",
+          "price": "1000 INR",
+          "imageId": "5.jpg"
+        },
+        {
+          "name": "Waxing",
+          "description": "Full body waxing using gentle, effective techniques.",
+          "price": "700 INR",
+          "imageId": "6.jpg"
+        },
+        {
+          "name": "Threading",
+          "description": "Precise eyebrow and facial threading.",
+          "price": "150 INR",
+          "imageId": "7.jpg"
+        },
+        {
+          "name": "Body Scrub",
+          "description": "Exfoliating body scrub to rejuvenate your skin.",
+          "price": "900 INR",
+          "imageId": "8.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Nail Services",
+      "services": [
+        {
+          "name": "Manicure",
+          "description": "Classic and gel manicures for beautiful hands.",
+          "price": "500 INR",
+          "imageId": "9.jpg"
+        },
+        {
+          "name": "Pedicure",
+          "description": "Relaxing pedicures with foot massage.",
+          "price": "600 INR",
+          "imageId": "10.jpg"
+        },
+        {
+          "name": "Nail Art",
+          "description": "Custom nail art designs and embellishments.",
+          "price": "700 INR",
+          "imageId": "11.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Makeup Services",
+      "services": [
+        {
+          "name": "Bridal Makeup",
+          "description": "Complete bridal makeup package for your special day.",
+          "price": "5000 INR",
+          "imageId": "12.jpg"
+        },
+        {
+          "name": "Party Makeup",
+          "description": "Glamorous makeup for parties and events.",
+          "price": "2000 INR",
+          "imageId": "13.jpg"
+        },
+        {
+          "name": "Makeup Consultation",
+          "description": "Personalized makeup consultation and trial.",
+          "price": "1000 INR",
+          "imageId": "14.jpg"
+        }
+      ]
+    },
+    {
+      "category": "Spa Services",
+      "services": [
+        {
+          "name": "Full Body Massage",
+          "description": "Relaxing and therapeutic full body massage.",
+          "price": "2000 INR",
+          "imageId": "15.jpg"
+        },
+        {
+          "name": "Aromatherapy",
+          "description": "Aromatherapy massage with essential oils.",
+          "price": "2200 INR",
+          "imageId": "16.jpg"
+        },
+        {
+          "name": "Hot Stone Massage",
+          "description": "Therapeutic massage using heated stones.",
+          "price": "2500 INR",
+          "imageId": "17.jpg"
+        }
+      ]
+    }
+  ]
+}

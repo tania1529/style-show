@@ -1,0 +1,31 @@
+/* src/styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: "Noto Serif", serif;
+  
+}
+
+
+  
+  h1 {
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin-bottom: 1em;
+  }
+  
+  form button {
+    background: #333;
+    color: #fff;
+    padding: 0.5em;
+    border: none;
+  }
+  
