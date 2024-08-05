@@ -14,7 +14,7 @@ const Services = () => {
             {categories?.services?.map((services, index) => {
               return (
                 <div key={`service${index}`} className="services">
-                  <img src={`${process.env.PUBLIC_URL}/services/${services?.imageId}`}/>
+                  <img alt="services" src={`${process.env.PUBLIC_URL}/services/${services?.imageId}`}/>
                   <h4>{services?.name}</h4>
                   <div>{services?.description}</div>
                 </div>
