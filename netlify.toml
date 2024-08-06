@@ -1,2 +1,8 @@
+[build]
+  publish = "build"
+  command = "npm run build"
+
 [build.environment]
-  NODE_VERSION = "20.x"
+  NODE_VERSION = "16.x"
+  NODE_OPTIONS = "--openssl-legacy-provider"
+  NETLIFY_BUILD_DEBUG = "true"
