@@ -1,5 +1,7 @@
+import React from "react";
 import listOfServices from "./services.json";
 import "./services.scss"
+
 const Services = () => {
     console.log(process.env.PUBLIC_URL)
   return (

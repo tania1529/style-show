@@ -5,6 +5,7 @@ import OlaPlex from '../../icons/brandLogos/olaplex.png';
 import Schwarzkopf from '../../icons/brandLogos/Schwarzkopf.png';
 import WetBrush from '../../icons/brandLogos/WetBrush.png';
 import "./ourBrands.scss";
+import React from "react";
 
 const OurBrands = () =>{
     return(
