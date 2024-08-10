@@ -1,39 +1,12 @@
 .ui-our-brands{
-h1{
-    text-align: center;
-    background-color: #f7f7f7;
-    padding: 0.5rem 1rem;
-    width: fit-content;
-    margin: auto;
-    border-radius: 0.5rem;
-    margin-top: 2rem;
-}
-    .brands {
-        margin: auto;
-        margin-bottom: 2rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 70%;
-    
-        div {
-            height: 10rem;
-            width: 30%;
-            margin: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-    
-            img {
-                // height: 100%;
-                width: 60%;
-                transition: transform 0.5s ease;
-    
-                &:hover {
-                    transform: scale(1.2);
-                }
-            }
-    
-        }
+
+img {
+    // height: 100%;
+    // align-items: center;
+    transition: transform 0.5s ease;
+
+    &:hover {
+        transform: scale(1.2);
     }
+}
 }

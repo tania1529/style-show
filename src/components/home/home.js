@@ -9,14 +9,16 @@ import home5 from "../../icons/home/home5.jpg";
 import home6 from "../../icons/home/home6.jpg";
 import home7 from "../../icons/home/home7.jpg";
 import './home.scss';
+import { salonDetails } from "../../utils/constants";
+import OurBrands from "../ourBrands/ourBrands";
 
 const Home = () => {
   return (
-    <div className="ui-home">
+    <div className="ui-home p3">
       <Slideshow images={[home1, home2, home3, home4, home5, home6, home7]} />
 
       <p>
-        At Style Show, we transform your beauty experience with expert care and
+        At {salonDetails.name}, we transform your beauty experience with expert care and
         a touch of elegance. Located in Jalandhar, our salon offers a range of
         top-tier services, including stylish haircuts, vibrant color treatments,
         and indulgent spa services. </p>
@@ -25,9 +27,10 @@ const Home = () => {
         dedicated to making you look and feel fabulous with personalized
         attention and premium products. Immerse yourself in our chic, welcoming
         atmosphere and let us bring your beauty vision to life. Discover the
-        ultimate in relaxation and style with Style Show. Book your appointment
+        ultimate in relaxation and style with {salonDetails.name}. Book your appointment
         toda
       </p>
+<OurBrands/>
     </div>
   );
 };

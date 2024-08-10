@@ -1,29 +1,46 @@
 import React from "react";
 import listOfServices from "./services.json";
-import "./services.scss"
+import "./services.scss";
+import { Card, Row, Col, Divider, Flex } from "antd";
+const { Meta } = Card;
+
 
 const Services = () => {
-    console.log(process.env.PUBLIC_URL)
   return (
-    <div className="ui-services">
-      <h1>Services We Offer</h1>
-      {listOfServices?.salon_services?.map((categories) => {
+    <div className="ui-services p3">
+      <Row justify={"center"} className="mb3">
+        <h1><i>Services We Offer</i></h1>
+      </Row>
+      {listOfServices?.salon_services?.map((categories, index) => {
         return (
-          <div className="categories">
-            <h3>{categories?.category}</h3>
-            <div className="services-container">
 
-            {categories?.services?.map((services, index) => {
-              return (
-                <div key={`service${index}`} className="services">
-                  <img alt="services" src={`${process.env.PUBLIC_URL}/services/${services?.imageId}`}/>
-                  <h4>{services?.name}</h4>
-                  <div>{services?.description}</div>
-                </div>
-              );
-            })}
-            </div>
-          </div>
+            <Row key={`categories${index}`} justify={"center"}>
+            <Divider orientation="left"> <h3><i>{categories?.category}</i></h3></Divider>
+              <Flex  wrap gap="large" justify="space-evenly">
+              {categories?.services?.map((services, index) => {
+                return (
+                  <Col span={6} key={`services_${index}`}>
+                    <Card
+                      key={`service${index}`}
+                      hoverable
+                      // style={{ height: "350px" }}
+                      cover={
+                        <img
+                          alt="example"
+                          src={`${process.env.PUBLIC_URL}/services/${services?.imageId}`}
+                        />
+                      }
+                    >
+                      <Meta
+                        title={services?.name}
+                        description={services?.description}
+                      />
+                    </Card>
+                  </Col>
+                );
+              })}
+              </Flex>
+            </Row>
         );
       })}
     </div>

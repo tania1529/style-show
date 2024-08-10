@@ -1,0 +1,40 @@
+.ui-about { 
+    width: 80%;
+    margin: auto;
+    p{
+        margin: 0;
+    }
+
+    .rightAnimated {
+        animation-duration: 1.5s;
+        animation-name: slideright;
+      }
+      
+      @keyframes slideright {
+        from {
+          translate: 150vw 0;
+          scale: 200% 1;
+        }
+      
+        to {
+          translate: 0 0;
+          scale: 100% 1;
+        }
+      }
+    .leftAnimated {
+        animation-duration: 1.5s;
+        animation-name: sliderleft;
+      }
+      
+      @keyframes sliderleft {
+        from {
+          translate:   -150vw 0;
+          scale: 200% 1;
+        }
+      
+        to {
+          translate: 0 0;
+          scale: 100% 1;
+        }
+      }
+}

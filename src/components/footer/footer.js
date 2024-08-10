@@ -1,7 +1,8 @@
 import React from "react";
 import "./footer.scss";
-import { InstagramOutlined, TwitterOutlined, PinterestOutlined, FacebookOutlined, YoutubeOutlined } from '@ant-design/icons';
+import { InstagramFilled, TwitterCircleFilled, PinterestFilled, FacebookFilled, YoutubeFilled, PhoneFilled, ClockCircleFilled, MailFilled } from '@ant-design/icons';
 
+import { salonDetails } from "../../utils/constants";
 const Footer = () => {
   return (
     <footer className="ui-footer">
@@ -21,15 +22,16 @@ const Footer = () => {
             href="https://facebook.com/styleshow"
             target="_blank"
             rel="noopener noreferrer"
+
           >
-           <FacebookOutlined />
+          <FacebookFilled />
           </a>
           <a
             href="https://instagram.com/styleshow_"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <InstagramOutlined />
+            <InstagramFilled />
 
           </a>
           <a
@@ -37,30 +39,32 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-           <TwitterOutlined />
+           <TwitterCircleFilled />
           </a>
           <a
             href="https://twitter.com/styleshow"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <YoutubeOutlined />
+            <YoutubeFilled />
           </a>
           <a
             href="https://twitter.com/styleshow"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <PinterestOutlined />
+            <PinterestFilled />
           </a>
         </div>
       {/* Section 1 Address */}
         <div className="address">
-          <h3>Style Show</h3>
-          <p>123 Beauty Lane, Glamour City</p>
-          <p>Phone: (123) 456-7890</p>
-          <p>Email: info@styleshow.com</p>
-          <p>HOURS: MON - FRI 9am - 6pm, SAT 10am - 4pm</p>
+          <h3>{salonDetails["name"]}</h3>
+          <p>{salonDetails["addressLine1"]}</p>
+          <p>{salonDetails["addressLine2"]}</p>
+          <p>{salonDetails["addressLine3"]}</p>
+          <h5><PhoneFilled /> {salonDetails["phoneNo"]}</h5>
+          <h5><MailFilled /> {salonDetails["email"]}</h5>
+          <h5><ClockCircleFilled /> MON - FRI 9am - 6pm, SAT 10am - 4pm</h5>
         </div>
         
        
@@ -84,7 +88,7 @@ const Footer = () => {
           ></iframe>
         </div> */}
       <div className="copyright">
-        <p>&copy; 2024 Style Show. All rights reserved.</p>
+        <p>&copy; 2024 {salonDetails.name}. All rights reserved.</p>
       </div>
     </footer>
   );
