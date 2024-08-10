@@ -1,7 +1,7 @@
 // src/components/Navbar.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../../icons/logo.svg";
+import logo from "../../icons/logo.png";
 import "./navbar.scss";
 import { Row, Col, Menu, Image, theme } from "antd";
 
@@ -67,15 +67,19 @@ const Navbar = () => {
       style={{ backgroundColor: colorBgContainer }}
       justify={"space-around"}
     >
-      <Col xl={4} xs={18} offset={2}>
+      <Col xl={4} xs={6} offset={2}>
         <Image
-          className="pointer"
+          className="pointer m-3"
           preview={false}
           src={logo}
           alt="Logo"
           onClick={() => {
             onClick("home");
           }}
+
+          // height={30}
+          // width={150}
+
         />
       </Col>
       <Col xl={11} xs={4}>
