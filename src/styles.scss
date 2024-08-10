@@ -6,6 +6,12 @@
   font-family: "Noto Serif", serif;
 }
 
+a {
+      text-decoration: none;
+      color: #f4f4f4;
+      text-transform: capitalize;
+    }
+
 p, ul {
   font-size: 16px;
   font-weight: 500;

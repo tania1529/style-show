@@ -25,7 +25,7 @@ const OurBrands = () => {
         <Flex wrap gap="large" align="center" justify="space-evenly">
           {brands.map((item, index) => {
             return (
-              <Col key={`brand_${index}`} span={6} style={{ textAlign: "center" }}>
+              <Col key={`brand_${index}`} xl={6} xs={20} style={{ textAlign: "center" }}>
                 <Image alt="example" src={item} width="250px" className="mb2" preview={false} />
               </Col>
             );
