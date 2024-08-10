@@ -19,7 +19,7 @@ const Services = () => {
               <Flex  wrap gap="large" justify="space-evenly">
               {categories?.services?.map((services, index) => {
                 return (
-                  <Col span={6} key={`services_${index}`}>
+                  <Col xl={6} xs={11} key={`services_${index}`}>
                     <Card
                       key={`service${index}`}
                       hoverable

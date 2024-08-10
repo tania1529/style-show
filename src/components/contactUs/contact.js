@@ -1,13 +1,20 @@
 // src/components/Contact.js
 import React, { useState } from "react";
-import {
-  ClockCircleFilled,
-  MailFilled,
-  PhoneFilled,
-} from "@ant-design/icons";
+import { ClockCircleFilled, MailFilled, PhoneFilled } from "@ant-design/icons";
 import "./contact.scss";
 import emailjs from "emailjs-com";
-import { Button, Input, Spin, notification, Form, Row, Col, Select, InputNumber, Flex } from "antd";
+import {
+  Button,
+  Input,
+  Spin,
+  notification,
+  Form,
+  Row,
+  Col,
+  Select,
+  InputNumber,
+  Flex,
+} from "antd";
 import TextArea from "antd/es/input/TextArea";
 import { salonDetails } from "../../utils/constants";
 
@@ -67,45 +74,36 @@ const Contact = () => {
 
   return (
     <div className="ui-contact p3">
-      <Row justify="center" className="mb3">
-
-
-
-      <h1>{salonDetails.name}</h1>
+      <Row justify="center" style={{textAlign:"center"}} className="mb3">
+        <h1>{salonDetails.name}</h1>
       </Row>
-      <Row justify="center">
-
-
-      <p>{salonDetails["addressLine1"]}</p>
+      <Row justify="center" style={{textAlign:"center"}}>
+        <p>{salonDetails["addressLine1"]}</p>
       </Row>
-      <Row justify="center">
-
-      <p>{salonDetails["addressLine2"]}</p>
+      <Row justify="center" style={{textAlign:"center"}}>
+        <p>{salonDetails["addressLine2"]}</p>
       </Row>
-      <Row justify="center">
-
-      <p>{salonDetails["addressLine3"]}</p>
+      <Row justify="center" style={{textAlign:"center"}}>
+        <p>{salonDetails["addressLine3"]}</p>
       </Row>
-      <Row justify="center">
-
-      <p>
-        <PhoneFilled /> {salonDetails["phoneNo"]}
-      </p>
+      <Row justify="center" style={{textAlign:"center"}}>
+        <p>
+          <PhoneFilled /> {salonDetails["phoneNo"]}
+        </p>
       </Row>
-      <Row justify="center">
-
-      <p>
-        <MailFilled /> {salonDetails["email"]}
-      </p>
+      <Row justify="center" style={{textAlign:"center"}}>
+        <p>
+          <MailFilled /> {salonDetails["email"]}
+        </p>
       </Row>
-      <Row justify="center">
-      <p>
-        <ClockCircleFilled /> MON - FRI 9am - 6pm, SAT 10am - 4pm
-      </p>
+      <Row justify="center" style={{textAlign:"center"}}>
+        <p>
+          <ClockCircleFilled /> MON - FRI 9am - 6pm, SAT 10am - 4pm
+        </p>
       </Row>
 
-      <Row justify="center">
-        <Col span={12}>
+      <Row justify="center" style={{textAlign:"center"}}>
+        <Col xl={12} xs={23}>
           <Spin spinning={loading}>
             <Form
               form={form}
@@ -123,7 +121,7 @@ const Contact = () => {
               >
                 <Input size="large" placeholder="e.g. John Wick" />
               </Form.Item>
-             
+
               <Form.Item
                 name="contact"
                 label="Contact"
@@ -142,7 +140,6 @@ const Contact = () => {
                 />
               </Form.Item>
 
-             
               <Form.Item
                 name="emailId"
                 label="Email Id"
@@ -153,30 +150,25 @@ const Contact = () => {
               <Form.Item
                 name="message"
                 label="Message"
-                rules={[{ required: true,}]}
+                rules={[{ required: true }]}
               >
-                <TextArea size="large" placeholder="Type your message here..." />
+                <TextArea
+                  size="large"
+                  placeholder="Type your message here..."
+                />
               </Form.Item>
-
-             
-
-             
 
               <Form.Item>
                 <Flex justify="center" >
-
                   <Button type="primary" htmlType="submit" size="large">
                     Send
                   </Button>
                 </Flex>
-                  
               </Form.Item>
             </Form>
           </Spin>
         </Col>
       </Row>
-
-    
     </div>
   );
 };

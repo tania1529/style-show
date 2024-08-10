@@ -13,7 +13,7 @@ const About = () => {
   } = theme.useToken();
 
   return (
-    <div className="ui-about">
+    <div className="ui-about p3">
       <Divider orientation="left">
         <h2>
           <i>Welcome to Style Show</i>
@@ -24,10 +24,10 @@ const About = () => {
         align={"middle"}
 
       >
-        <Col span={8}>
+        <Col xl={8} xs={24}>
           <Image src={About1} preview={false} style={{borderRadius: '1rem'}}/>
         </Col>
-        <Col span={15} className="p2" style={{
+        <Col xl={15} xs={24} className="p2" style={{
           backgroundColor: colorBgContainer,
           borderRadius: borderRadiusLG,
         }}>
@@ -50,7 +50,7 @@ const About = () => {
          justify={"space-between"}
          align={"middle"}
       >
-        <Col span={15} className="p2" style={{
+        <Col xl={15} xs={24} className="p2" style={{
           backgroundColor: colorBgContainer,
           borderRadius: borderRadiusLG,
         }}>
@@ -62,7 +62,7 @@ const About = () => {
             you look and feel your best.
           </p>
         </Col>
-        <Col span={8}>
+        <Col xl={8} xs={24}>
           <Image src={About2} preview={false} style={{borderRadius: '1rem'}}/>
         </Col>
       </Row>
@@ -74,10 +74,10 @@ const About = () => {
             <i>Our Services</i>
           </h2>
         </Divider>
-        <Col span={8}>
+        <Col xl={8} xs={24}>
           <Image src={About3} preview={false} style={{borderRadius: '1rem'}}/>
         </Col>
-        <Col span={15} className="p2" style={{
+        <Col xl={15} xs={24} className="p2" style={{
           backgroundColor: colorBgContainer,
           borderRadius: borderRadiusLG,
         }}>
@@ -99,7 +99,7 @@ const About = () => {
           </h2>
         </Divider>
         <Col
-          span={15}
+          xl={15} xs={24}
           className="p2"
           style={{
             backgroundColor: colorBgContainer,
@@ -130,7 +130,7 @@ const About = () => {
             </li>
           </ul>
         </Col>
-        <Col span={8}>
+        <Col xl={8} xs={24}>
           <Image src={About4} preview={false} style={{borderRadius: '1rem'}} />
         </Col>
       </Row>
@@ -142,11 +142,11 @@ const About = () => {
             <i>Join us</i>
           </h2>
         </Divider>
-        <Col span={8}>
+        <Col xl={8} xs={24}>
           <Image src={About5} preview={false} style={{borderRadius: '1rem'}}/>
         </Col>
         <Col
-          span={15}
+          xl={15} xs={24}
           className="p2"
           style={{
             backgroundColor: colorBgContainer,

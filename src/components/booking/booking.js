@@ -73,11 +73,11 @@ const Booking = () => {
 
   return (
     <div className="ui-booking p3">
-      <Row justify="center" className="mb3">
+      <Row justify="center" className="mb3" style={{textAlign:"center"}}>
           <h1><i>Book Your Appointment at {salonDetails.name}</i></h1>
       </Row>
       <Row justify="center">
-        <Col span={16}>
+        <Col xl={16} xs={20} >
           <p>
             Welcome to {salonDetails.name}, where your beauty and wellness are
             our top priority. Booking an appointment with us is simple and
@@ -135,7 +135,7 @@ const Booking = () => {
         </Col>
       </Row>
       <Row justify="center">
-        <Col span={12}>
+        <Col xl={12} xs={23}>
           <Spin spinning={loading}>
             <Form
               form={form}

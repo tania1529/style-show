@@ -189,7 +189,7 @@ const FooterBottom = () => {
             title="Google Map"
           ></iframe>
         </div> */}
-      <Row className="copyright" style={{ textAlign: "center" }}>
+      <Row className="copyright" justify="center" style={{ textAlign: "center" }}>
         <p>&copy; 2024 {salonDetails.name}. All rights reserved.</p>
       </Row>
     </Footer>
