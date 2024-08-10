@@ -14,13 +14,18 @@ import {
   Select,
   InputNumber,
   Flex,
+  Grid
 } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import { salonDetails } from "../../utils/constants";
+import classNames from "classnames";
+
+const { useBreakpoint } = Grid;
 
 const Contact = () => {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
+  const screens = useBreakpoint();
 
   const prefixSelector = (
     <Form.Item name="prefix" noStyle>
@@ -72,8 +77,12 @@ const Contact = () => {
     }
   };
 
+  const paddingClass = classNames("ui-contact p3", {
+    "ui-contact--100": screens.xs,
+  });
+
   return (
-    <div className="ui-contact p3">
+    <div className={paddingClass}>
       <Row justify="center" style={{textAlign:"center"}} className="mb3">
         <h1>{salonDetails.name}</h1>
       </Row>

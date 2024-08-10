@@ -5,6 +5,9 @@
   background-color: #fafafa;
   width: 80%;
   margin: auto;
+  &--100{
+    width: 100%;
+  }
 
   form {
     margin-top: 2rem;

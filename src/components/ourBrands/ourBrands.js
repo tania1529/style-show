@@ -16,7 +16,7 @@ const brands = [Loreal, Kerastase, Dyson, OlaPlex, Schwarzkopf, WetBrush, GK, In
 const OurBrands = () => {
   return (
     <div className="ui-our-brands p3">
-      <Row justify={"center"} className="mb3">
+      <Row justify={"center"} className="mb3" style={{textAlign:"center"}}>
         <h1>
           <i>Our Partner Brands</i>
         </h1>

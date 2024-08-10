@@ -13,13 +13,18 @@ import {
   Col,
   notification,
   Spin,
+  Grid,
 } from "antd";
 import "./booking.scss";
 import { salonDetails } from "../../utils/constants";
+import classNames from "classnames";
+
+const { useBreakpoint } = Grid;
 
 const Booking = () => {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
+  const screens = useBreakpoint();
 
   const prefixSelector = (
     <Form.Item name="prefix" noStyle>
@@ -71,13 +76,19 @@ const Booking = () => {
     }
   };
 
+  const paddingClass = classNames("ui-booking p3", {
+    "ui-booking--100": screens.xs,
+  });
+
   return (
-    <div className="ui-booking p3">
-      <Row justify="center" className="mb3" style={{textAlign:"center"}}>
-          <h1><i>Book Your Appointment at {salonDetails.name}</i></h1>
+    <div className={paddingClass}>
+      <Row justify="center" className="mb3" style={{ textAlign: "center" }}>
+        <h1>
+          <i>Book Your Appointment at {salonDetails.name}</i>
+        </h1>
       </Row>
       <Row justify="center">
-        <Col xl={16} xs={20} >
+        <Col xl={16} xs={24}>
           <p>
             Welcome to {salonDetails.name}, where your beauty and wellness are
             our top priority. Booking an appointment with us is simple and

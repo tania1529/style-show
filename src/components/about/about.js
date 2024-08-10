@@ -1,4 +1,4 @@
-import { Col, Divider, Image, Row, theme } from "antd";
+import { Col, Divider, Image, Row, theme, Grid } from "antd";
 import React from "react";
 import About1 from "../../icons/about/1.jpg";
 import About2 from "../../icons/about/2.jpg";
@@ -6,11 +6,21 @@ import About5 from "../../icons/about/5.jpg";
 import About4 from "../../icons/about/4.jpg";
 import About3 from "../../icons/about/3.jpg";
 import "./about.scss";
+import classNames from 'classnames';
+
+const { useBreakpoint } = Grid;
 
 const About = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+  const screens = useBreakpoint();
+
+  const paddingClass = classNames({
+    'pb2': screens.xs,
+    'pt2': screens.xs,
+    'p2': screens.xl,
+  });
 
   return (
     <div className="ui-about p3">
@@ -27,7 +37,7 @@ const About = () => {
         <Col xl={8} xs={24}>
           <Image src={About1} preview={false} style={{borderRadius: '1rem'}}/>
         </Col>
-        <Col xl={15} xs={24} className="p2" style={{
+        <Col xl={15} xs={24}  className={paddingClass} style={{
           backgroundColor: colorBgContainer,
           borderRadius: borderRadiusLG,
         }}>
@@ -50,7 +60,7 @@ const About = () => {
          justify={"space-between"}
          align={"middle"}
       >
-        <Col xl={15} xs={24} className="p2" style={{
+        <Col xl={15} xs={24} className={paddingClass} style={{
           backgroundColor: colorBgContainer,
           borderRadius: borderRadiusLG,
         }}>
@@ -77,7 +87,7 @@ const About = () => {
         <Col xl={8} xs={24}>
           <Image src={About3} preview={false} style={{borderRadius: '1rem'}}/>
         </Col>
-        <Col xl={15} xs={24} className="p2" style={{
+        <Col xl={15} xs={24} className={paddingClass} style={{
           backgroundColor: colorBgContainer,
           borderRadius: borderRadiusLG,
         }}>
@@ -100,7 +110,7 @@ const About = () => {
         </Divider>
         <Col
           xl={15} xs={24}
-          className="p2"
+          className={paddingClass}
           style={{
             backgroundColor: colorBgContainer,
             borderRadius: borderRadiusLG,
@@ -147,7 +157,7 @@ const About = () => {
         </Col>
         <Col
           xl={15} xs={24}
-          className="p2"
+          className={paddingClass}
           style={{
             backgroundColor: colorBgContainer,
             borderRadius: borderRadiusLG,
