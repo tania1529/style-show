@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.scss";
-import { Layout, Row, Col } from "antd";
+import { Layout, Row, Col, Avatar } from "antd";
 
 import {
   InstagramFilled,
@@ -17,69 +17,139 @@ import { salonDetails } from "../../utils/constants";
 const { Footer } = Layout;
 const FooterBottom = () => {
   return (
-    <Footer className="ui-footer">
+    <Footer className="ui-footer p3 pb0">
       {/* section 2  */}
-      <Row justify={"center"} style={{ textAlign: "center" }}>
+      <Row justify={"center"} style={{ textAlign: "center" }} className="mb2">
         {/* <h4>Quick Links</h4> */}
-        <Col xl={4} xs={24}>
+        <Col xl={3} xs={6}>
           <a href="/about">ABOUT US</a>
         </Col>
-        <Col xl={4} xs={24}>
+        <Col xl={3} xs={6}>
           <a href="/services">SERVICES</a>
         </Col>
-        <Col xl={4} xs={24}>
+        <Col xl={3} xs={6}>
           <a href="/booking">BOOKING</a>
         </Col>
-        <Col xl={4} xs={24}>
+        <Col xl={3} xs={6}>
           <a href="/contact">CONTACT US</a>
         </Col>
       </Row>
       {/* section 3 */}
-      <Row justify={"center"} style={{ textAlign: "center" }}>
+      <Row
+        className="follow"
+        justify={"center"}
+        style={{ textAlign: "center" }}
+      >
         {/* <h4>Follow Us</h4> */}
-        <Col xl={2} xs={24}>
+        <Col xl={1} xs={4}>
           <a
             href="https://facebook.com/styleshow"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FacebookFilled />
+            {/* <FacebookFilled frameBorder={200}/> */}
+
+            <Avatar
+              icon={<FacebookFilled />}
+              style={{
+                backgroundColor: "#fff",
+                color: "#333",
+                borderRadius: "50%",
+                width: "40px",
+                height: "40px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            />
           </a>
         </Col>
-        <Col xl={2} xs={24}>
+        <Col xl={1} xs={4}>
           <a
             href="https://instagram.com/styleshow_"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <InstagramFilled />
+            {/* <InstagramFilled /> */}
+            <Avatar
+              icon={<InstagramFilled />}
+              style={{
+                backgroundColor: "#fff",
+                color: "#333",
+                borderRadius: "50%",
+                width: "40px",
+                height: "40px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            />
           </a>
         </Col>
-        <Col xl={2} xs={24}>
+        <Col xl={1} xs={4}>
           <a
             href="https://twitter.com/styleshow"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <TwitterCircleFilled />
+            {/* <TwitterCircleFilled /> */}
+            <Avatar
+              icon={<TwitterCircleFilled />}
+              style={{
+                backgroundColor: "#fff",
+                color: "#333",
+                borderRadius: "50%",
+                width: "40px",
+                height: "40px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            />
           </a>
         </Col>
-        <Col xl={2} xs={24}>
+        <Col xl={1} xs={4}>
           <a
             href="https://twitter.com/styleshow"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <YoutubeFilled />
+            {/* <YoutubeFilled /> */}
+            <Avatar
+              icon={<YoutubeFilled />}
+              style={{
+                backgroundColor: "#fff",
+                color: "#333",
+                borderRadius: "50%",
+                width: "40px",
+                height: "40px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            />
           </a>
         </Col>
-        <Col xl={2} xs={24}>
+        <Col xl={1} xs={4}>
           <a
             href="https://twitter.com/styleshow"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <PinterestFilled />
+            {/* <PinterestFilled /> */}
+            <Avatar
+              icon={<PinterestFilled />}
+              style={{
+                backgroundColor: "#fff",
+                color: "#333",
+                borderRadius: "50%",
+                width: "40px",
+                height: "40px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            />
           </a>
         </Col>
       </Row>
@@ -119,9 +189,9 @@ const FooterBottom = () => {
             title="Google Map"
           ></iframe>
         </div> */}
-      <div className="copyright">
+      <Row className="copyright" style={{ textAlign: "center" }}>
         <p>&copy; 2024 {salonDetails.name}. All rights reserved.</p>
-      </div>
+      </Row>
     </Footer>
   );
 };
