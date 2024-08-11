@@ -21,7 +21,7 @@ const Gallery = () => {
       <Row justify={"center"}>
         {urls.map((item, index) => {
           return (
-            <Col xl={6} xs={24} offset={1} key={`gallery_${index}`}>
+            <Col xl={7} xs={24} className="mb3" key={`gallery_${index}`}>
               <InstagramEmbed placeholderDisabled={true} url={item} placeholderSpinner={<Spin spinning={true}/>}/>
             </Col>
           );
