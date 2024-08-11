@@ -1,7 +1,6 @@
 import React from "react";
 import "./footer.scss";
-import { Layout, Row, Col, Avatar } from "antd";
-
+import { Layout, Row, Col, Avatar, Grid } from "antd";
 import {
   InstagramFilled,
   TwitterCircleFilled,
@@ -12,12 +11,22 @@ import {
   ClockCircleFilled,
   MailFilled,
 } from "@ant-design/icons";
-
 import { salonDetails } from "../../utils/constants";
+import classNames from "classnames";
+
+const { useBreakpoint } = Grid;
+
 const { Footer } = Layout;
+
 const FooterBottom = () => {
+  const screens = useBreakpoint();
+  const paddingClass = classNames("ui-footer  pb0", {
+    "p1": screens.xs,
+    "p3": screens.xl,
+  });
+
   return (
-    <Footer className="ui-footer p3 pb0">
+    <Footer className={paddingClass}>
       {/* section 2  */}
       <Row justify={"center"} style={{ textAlign: "center" }} className="mb2">
         {/* <h4>Quick Links</h4> */}
@@ -154,21 +163,21 @@ const FooterBottom = () => {
         </Col>
       </Row>
       {/* Section 1 Address */}
-      <div className="address">
+      <Row className="address" justify={"center"} style={{textAlign:"center"}} >
         <h3>{salonDetails["name"]}</h3>
         <p>{salonDetails["addressLine1"]}</p>
         <p>{salonDetails["addressLine2"]}</p>
         <p>{salonDetails["addressLine3"]}</p>
-        <h5>
+        <p>
           <PhoneFilled /> {salonDetails["phoneNo"]}
-        </h5>
-        <h5>
+        </p>
+        <p>
           <MailFilled /> {salonDetails["email"]}
-        </h5>
-        <h5>
+        </p>
+        <p>
           <ClockCircleFilled /> MON - FRI 9am - 6pm, SAT 10am - 4pm
-        </h5>
-      </div>
+        </p>
+      </Row>
 
       {/* <div className="footer-section">
           <h4>Testimonials</h4>

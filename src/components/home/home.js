@@ -11,10 +11,18 @@ import home7 from "../../icons/home/home7.jpg";
 import './home.scss';
 import { salonDetails } from "../../utils/constants";
 import OurBrands from "../ourBrands/ourBrands";
+import classNames from "classnames";
+import { Grid } from "antd";
+const { useBreakpoint } = Grid;
 
 const Home = () => {
+  const screens = useBreakpoint();
+  const paddingClass = classNames("ui-home", {
+    "p1": screens.xs,
+    "p3": screens.xl,
+  });
   return (
-    <div className="ui-home p3">
+    <div className={paddingClass}>
       <Slideshow images={[home1, home2, home3, home4, home5, home6, home7]} />
 
       <p>
@@ -28,7 +36,7 @@ const Home = () => {
         attention and premium products. Immerse yourself in our chic, welcoming
         atmosphere and let us bring your beauty vision to life. Discover the
         ultimate in relaxation and style with {salonDetails.name}. Book your appointment
-        toda
+        today.
       </p>
 <OurBrands/>
     </div>
